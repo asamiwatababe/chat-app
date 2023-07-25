@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to:"rooms#index"
   resources :users, only: [:edit, :update]
-  resources :rooms, only: [:new, :create] do 
+  resources :rooms, only: [:new, :createm, :destroy] do 
     resources :messages, only: [:index, :create]
   end
 end
